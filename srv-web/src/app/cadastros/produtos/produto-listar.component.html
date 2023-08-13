@@ -1,0 +1,34 @@
+<div class="tituloListas">
+    <h1>Lista de serviços</h1>
+    <button class="btnBarbeariaJJLista" routerLink="/cadastros/produtos/incluir" color="primary">Incluir</button>
+</div>
+<table mat-table [dataSource]="produtos" >
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding: 35px"> Id </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding: 35px"> Serviço </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.nome}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="descricao">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding: 35px"> Descrição do serviço </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.desc}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding: 35px"> Ações </th>
+    <td class="ultima-coluna" mat-cell *matCellDef="let produto">
+      <a routerLink="/cadastros/produtos/editar/{{ produto.id }}" style="text-align: center; padding-right: 35px">Editar</a>
+      <a routerLink="/cadastros/produtos/excluir/{{ produto.id }}">Excluir</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+</table>
+

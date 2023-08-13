@@ -1,0 +1,23 @@
+<div class="tituloListas">
+    <h1>Novo serviço</h1>
+  </div>
+  <form>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Serviço" name="Serviço" [(ngModel)]="produto.nome">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Descrição do serviço" name="descricao" [(ngModel)]="produto.desc">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="btnBarbeariaJJ" (click)="salvarProduto()" 
+                color="primary">Salvar</button>
+        <button mat-raised-button class="btnBarbeariaJJ" 
+                routerLink="/cadastros/produtos">Cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+   
+   

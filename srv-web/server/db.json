@@ -1,0 +1,11 @@
+{
+  "produtos": [],
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Bastião",
+      "desc": "Personalização",
+      "foto": ""
+    }
+  ]
+}
